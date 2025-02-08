@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+   <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- google  fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Jacques+Francois&display=swap" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css2?family=Abel&family=Jacques+Francois&display=swap" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css2?family=Abel&family=Jacques+Francois&family=League+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/products.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-custom navbar-mainbg">
+    <a class="navbar-brand navbar-logo" href="#">Basma</a>
+    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+        <li class="nav-item">
+          <a class="nav-link" href="home.html" href="javascript:void(0);">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="services.html" href="javascript:void(0);">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="specialOrder.html" href="javascript:void(0);">Special Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutUs.html" href="javascript:void(0);">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html" href="javascript:void(0);">Contact us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="profile.html" href="javascript:void(0);"><i class="fa fa-user" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="checkout.html" href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+        <!-- Main Container -->
+    <div class="container3 py-5">
+        <div class="row">
+            
+            <!-- 🔹 Filter Sidebar -->
+            <aside class="filter-sidebar col-lg-3 col-md-4">
+                <h4>Filters</h4>
+                <form>
+                    <!-- Category Filter -->
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <div>
+                            <input type="checkbox" id="jewelry"> <label for="jewelry">Jewelry</label><br>
+                            <input type="checkbox" id="decor"> <label for="decor">Decor</label><br>
+                            <input type="checkbox" id="fashion"> <label for="fashion">Fashion</label>
+                        </div>
+                    </div>
+
+                    <!-- Price Range Filter -->
+                    <div class="mb-3">
+                        <label class="form-label">Price Range</label>
+                        <div>
+                            <input type="checkbox" id="under50"> <label for="under50">Under $50</label><br>
+                            <input type="checkbox" id="50to100"> <label for="50to100">$50 - $100</label><br>
+                            <input type="checkbox" id="over100"> <label for="over100">Over $100</label>
+                        </div>
+                    </div>
+
+                      <!-- Size Filter -->
+                <h6 class="fw-bold mt-3">Size</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="size1">
+                    <label class="form-check-label" for="size1">Small</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="size2">
+                    <label class="form-check-label" for="size2">Medium</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="size3">
+                    <label class="form-check-label" for="size3">Large</label>
+                </div>
+
+                <!-- Color Filter -->
+                <h6 class="fw-bold mt-3">Color</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" id="color1">
+                    <label class="form-check-label" for="color1">Black</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" id="color2">
+                    <label class="form-check-label" for="color2">Red</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" id="color3">
+                    <label class="form-check-label" for="color3">Blue</label>
+                </div>
+
+
+                    <!-- Rating Filter -->
+                    <div class="mb-3">
+                        <label class="form-label">Minimum Rating</label>
+                        <div>
+                            <input type="checkbox" id="star1"> <label for="star1">⭐</label><br>
+                            <input type="checkbox" id="star2"> <label for="star2">⭐⭐</label><br>
+                            <input type="checkbox" id="star3"> <label for="star3">⭐⭐⭐</label><br>
+                            <input type="checkbox" id="star4"> <label for="star4">⭐⭐⭐⭐</label><br>
+                            <input type="checkbox" id="star5"> <label for="star4">⭐⭐⭐⭐⭐</label>
+
+                        </div>
+                    </div>
+
+                    <!-- Apply Filter Button -->
+                    <button type="submit" class="btn btn-filter w-100">Apply Filters</button>
+                </form>
+            </aside>
+
+            <!-- 🔹 Product Grid -->
+            <section class="col-lg-9 col-md-8 productGrid">
+                <div class="row g-4">
+                    <!-- Product 1 -->
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="/img/candle122.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Handmade Necklace</h5> -->
+                                <p class="card-text">Handmade Flower Scented
+                                    Container Candle</p>
+                                <p class="fw-bold">$29.99</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐☆
+                                </div>
+                               <a href="/HTML/checkout.html"><button class="btn add-to-cart mt-2">Add to Cart</button></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="/img/candle10.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Handmade Earrings</h5> -->
+                                <p class="card-text">Handmade Flower Scented
+                                    Container Candle</p>
+                                <p class="fw-bold">$19.99</p>
+                                <div class="rating">
+                                    ⭐⭐⭐☆★
+                                </div>
+                                <a href="/HTML/checkout.html"><button class="btn add-to-cart mt-2">Add to Cart</button></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="/img/candle8.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Decorative Vase</h5> -->
+                                <p class="card-text">Handmade Flower Scented
+                                    Container Candle</p>
+                                <p class="fw-bold">$39.99</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <a href="/HTML/checkout.html"><button class="btn add-to-cart mt-2">Add to Cart</button></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Product 4 -->
+                     <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="/img/candles1000.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Decorative Vase</h5> -->
+                                <p class="card-text">Handmade Flower Scented
+                                    Container Candle</p>
+                                <p class="fw-bold">$39.99</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <a href="/HTML/checkout.html"><button class="btn add-to-cart mt-2">Add to Cart</button></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                     <!-- Product 5 -->
+                     <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="/img/product.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Decorative Vase</h5> -->
+                                <p class="card-text">Handmade Flower Scented
+                                    Container Candle</p>
+                                <p class="fw-bold">$39.99</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <a href="/HTML/checkout.html"><button class="btn add-to-cart mt-2">Add to Cart</button></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                     <!-- Product 6 -->
+                     <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="/img/candle115.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Decorative Vase</h5> -->
+                                <p class="card-text">Handmade Flower Scented
+                                    Container Candle</p>
+                                <p class="fw-bold">$39.99</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <a href="/HTML/checkout.html"><button class="btn add-to-cart mt-2">Add to Cart</button></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                     <!-- Product 7 -->
+                     <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="/img/candle133.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Decorative Vase</h5> -->
+                                <p class="card-text">Handmade Flower Scented
+                                    Container Candle</p>
+                                <p class="fw-bold">$39.99</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <a href="/HTML/checkout.html"><button class="btn add-to-cart mt-2">Add to Cart</button></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                     <!-- Product 8 -->
+                     <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="/img/candle111.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Decorative Vase</h5> -->
+                                <p class="card-text">Handmade Flower Scented
+                                    Container Candle</p>
+                                <p class="fw-bold">$39.99</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <a href="/HTML/checkout.html"><button class="btn add-to-cart mt-2">Add to Cart</button></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                     <!-- Product 9 -->
+                     <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="/img/candle2.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body text-center">
+                                <!-- <h5 class="card-title">Decorative Vase</h5> -->
+                                <p class="card-text">Handmade Flower Scented
+                                    Container Candle</p>
+                                <p class="fw-bold">$39.99</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <a href="/HTML/checkout.html"><button class="btn add-to-cart mt-2">Add to Cart</button></a> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add 6 more products using the same structure -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+     <!-- Footer -->
+     <footer class="text-center text-lg-start bg-body-tertiary footerContainer ">
+        
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+      
+            <!-- Right -->
+            <div>
+                <a href="#" class="me-3 text-reset"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="me-3 text-reset"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="me-3 text-reset"><i class="fab fa-google"></i></a>
+                <a href="#" class="me-3 text-reset"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-3 text-reset"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="me-3 text-reset"><i class="fab fa-github"></i></a>
+            </div>
+            <!-- Right -->
+        </section>
+      
+        <!-- Section: Links -->
+        <section>
+            <div class="container text-center text-md-start mt-2">
+                <div class="row mt-2">
+                    
+                    <!-- Company Info -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-2">
+                        <h6 class="fw-bold navbar-logo">
+                            <i class="fas fa-gem me-2"></i>Basma
+                        </h6>
+                        <p>Because handmade items are not just products, but pieces that cary the soul of their makers..</p>
+                    </div>
+      
+                    <!-- Products -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
+                        <h6 class="text-uppercase fw-bold">Useful Links</h6>
+                        <p><a href="/HTML/home.html" class="text-reset">Home</a></p>
+                        <p><a href="/HTML/services.html" class="text-reset">Services</a></p>
+                        <p><a href="/HTML/aboutUs.html" class="text-reset">About Us</a></p>
+                        <p><a href="/HTML/contact.html" class="text-reset">Contact Us</a></p>
+                    </div>
+      
+                    <!-- Useful Links -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
+                        <h6 class="text-uppercase fw-bold">Useful Links</h6>
+                        <p><a href="/HTML/products.html" class="text-reset">Products</a></p>
+                        <p><a href="/HTML/profile.html" class="text-reset">Profile Settings</a></p>
+                        <p><a href="/HTML/checkout.html" class="text-reset">Orders</a></p>
+                        <p><a href="#!" class="text-reset">Help</a></p>
+                    </div>
+      
+                    <!-- Contact -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-2">
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <p><i class="fas fa-home me-2"></i> Irbid</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@example.com</p>
+                        <p><i class="fas fa-phone me-2"></i> +962 798 902 468</p>
+                        <p><i class="fas fa-phone me-2"></i> +962 790 000 000</p>
+                    </div>
+      
+                </div>
+            </div>
+        </section>
+      
+        <!-- Copyright Section -->
+        <div class="text-center p-2" style="background-color: #3E4235; ">
+          © 2025 Basma. All Rights Reserved.
+        </div>
+        <!-- End Footer -->
+        
+      
+     </footer>
+    
+    
+    
+      
+         <!-- Bootstrap 5 JS and jQuery  NAvbar -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+      <!-- NAvbar end -->
+      <script src="/JS/products.js"></script>
+    </body>
+    </html>

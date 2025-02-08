@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+   <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- google  fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Jacques+Francois&display=swap" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css2?family=Abel&family=Jacques+Francois&display=swap" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css2?family=Abel&family=Jacques+Francois&family=League+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/checkout.css">
+
+
+</head>
+<body>
+
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-custom navbar-mainbg">
+    <a class="navbar-brand navbar-logo" href="#">Basma</a>
+    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+        <li class="nav-item">
+          <a class="nav-link" href="home.html" href="javascript:void(0);">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="services.html" href="javascript:void(0);">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="specialOrder.html" href="javascript:void(0);">Special Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutUs.html" href="javascript:void(0);">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html" href="javascript:void(0);">Contact us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="profile.html" href="javascript:void(0);"><i class="fa fa-user" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="checkout.html" href="javascript:void(0);"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+<section class="cart">
+  <h1 class="text-center text-muted my-5">Checkout Page</h1>
+
+  <div class="tab-container">
+    <ul class="nav nav-tabs" id="checkoutTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#content1" role="tab">
+          <span class="numberCircle">1</span>Cart
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#content2" role="tab">
+          <span class="numberCircle">2</span>Customer Information
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#content3" role="tab">
+          <span class="numberCircle">3</span>Shipping
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="tab4-tab" data-bs-toggle="tab" href="#content4" role="tab">
+          <span class="numberCircle">4</span>Payment
+        </a>
+      </li>
+    </ul>
+    <div class="tab-content" id="checkoutTabsContent">
+      <!-- Cart Tab -->
+      <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1-tab">
+        <h3>Cart Items</h3>
+        <table class="table">
+          <tr>
+            <td class="item-img"><img src="/img/candle118.jpg" class="img-fluid" style="width: 5rem; height: 5rem;"></td>
+            <td class="item-details">
+              <span class="item-title">Scented Candle</span><br>
+              <span class="item-size">Size: S</span><br>
+              <span class="item-qty">Quantity: 1</span>
+            </td>
+            <td class="item-price">9.00 JD</td>
+          </tr>
+          <tr>
+            <td class="item-img"><img src="/img/crochet.jpg" class="img-fluid" style="width: 5rem; height: 5rem;"></td>
+            <td class="item-details">
+              <span class="item-title">Crochet</span><br>
+              <span class="item-size">Size: M</span><br>
+              <span class="item-qty">Quantity: 2</span>
+            </td>
+            <td class="item-price">10.00 JD</td>
+          </tr>
+        </table>
+        <div class="divider"></div>
+        <table class="table">
+          <tr>
+            <td>Subtotal</td>
+            <td class="text-end">19.00 JD</td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td class="text-end">3.50 JD</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Total</td>
+            <td class="fw-bold text-end">22.50 JD</td>
+          </tr>
+        </table>
+        <button class="button-finish w-100" onclick="nextTab(1)">Continue</button>
+      </div>
+
+      <!-- Customer Information Tab -->
+      <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2-tab">
+        <h3>Customer Information</h3>
+        <form>
+          <div class="mb-3">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <div class="input-group">
+              <span class="input-group-text">@</span>
+              <input type="text" class="form-control" id="username" placeholder="Username" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+          </div>
+          <button class="button-finish w-100" onclick="nextTab(2)">Continue</button>
+        </form>
+      </div>
+
+      <!-- Shipping Tab -->
+      <div class="tab-pane fade" id="content3" role="tabpanel" aria-labelledby="tab3-tab">
+        <h3>Shipping</h3>
+        <form>
+          <div class="mb-3">
+            <label for="adress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="adress" placeholder="1234 Main Street" required>
+          </div>
+          <div class="mb-3">
+            <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+            <input type="text" class="form-control" id="address2" placeholder="Flat No">
+          </div>
+          <div class="mb-3 row">
+            <div class="col-md-4">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required>
+                <option>Choose...</option>
+                <option>United Kingdom</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="city" class="form-label">City</label>
+              <select class="form-select" id="city" required>
+                <option>Choose...</option>
+                <option>London</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="postcode" class="form-label">Postcode</label>
+              <input type="text" class="form-control" id="postcode" placeholder="Postal Code" required>
+            </div>
+          </div>
+          <button class="button-finish w-100" onclick="nextTab(3)">Continue</button>
+        </form>
+      </div>
+
+      <!-- Payment Tab -->
+      <div class="tab-pane fade" id="content4" role="tabpanel" aria-labelledby="tab4-tab">
+        <h4 class="payment-title">Choose your payment method</h4>
+        <form action="" method="post">
+          <!-- Payment method options -->
+          <div class="form-check">
+            <div class="row mb-3">
+              <div class="col-1 d-flex align-items-center">
+                <input type="radio" class="form-check-input" id="radio1" name="radios" value="pp">
+                <label for="radio1" class="form-check-label"></label>
+              </div>
+              <div class="col-9">
+                <p class="pymt-type-name">Paypal</p>
+                <p class="pymt-type-desc">Safe payment online. Credit card needed. PayPal account is not necessary.</p>
+              </div>
+              <div class="col-2">
+                <img src="https://www.dropbox.com/s/pycofx0gngss4ef/logo-paypal.png?raw=1" alt="PayPal" class="img-fluid"/>
+              </div>
+            </div>
+          </div>
+      
+          <div class="form-check">
+            <div class="row mb-3">
+              <div class="col-1 d-flex align-items-center">
+                <input type="radio" class="form-check-input" id="radio2" name="radios" value="cc" checked>
+                <label for="radio2" class="form-check-label"></label>
+              </div>
+              <div class="col-9">
+                <p class="pymt-type-name">Credit Card</p>
+                <p class="pymt-type-desc">Safe money transfer using your bank account. Safe payment online. Credit card needed. Visa, Maestro, Discover, American Express</p>
+              </div>
+              <div class="col-2">
+                <div class="d-flex justify-content-between">
+                  <img src="https://www.dropbox.com/s/by52qpmkmcro92l/logo-visa.png?raw=1" alt="Visa" class="img-fluid"/>
+                  <img src="https://www.dropbox.com/s/6f5dorw54xomw7p/logo-mastercard.png?raw=1" alt="MasterCard" class="img-fluid"/>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Credit Card form -->
+          <div class="form-cc">
+            <div class="mb-3">
+              <label for="creditCardNumber" class="form-label">Credit Card Number</label>
+              <input type="text" class="form-control" id="creditCardNumber" value="4542 9931 9292 2293" />
+            </div>
+      
+            <div class="mb-3 row">
+              <div class="col">
+                <label for="expiryMonth" class="form-label">Expiry Month</label>
+                <select class="form-select" id="expiryMonth">
+                  <option selected>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
+                  <option>05</option>
+                  <option>06</option>
+                  <option>07</option>
+                  <option>08</option>
+                  <option>09</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="expiryYear" class="form-label">Expiry Year</label>
+                <select class="form-select" id="expiryYear">
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
+                  <option>05</option>
+                  <option>06</option>
+                  <option>07</option>
+                  <option>08</option>
+                  <option>09</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option selected>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
+                  <option>22</option>
+                  <option>23</option>
+                  <option>24</option>
+                </select>
+              </div>
+            </div>
+      
+            <div class="mb-3">
+              <label for="cvv" class="form-label">CVV Code <span class="text-muted">(?)</span></label>
+              <input type="text" class="form-control" id="cvv"/>
+            </div>
+      
+            <div class="mb-3">
+              <label for="cardHolder" class="form-label">Name on Card</label>
+              <input type="text" class="form-control" id="cardHolder"/>
+            </div>
+          </div>
+      
+          <!-- Buttons -->
+          <div class="d-flex justify-content-between mt-4">
+            <a href="#" class="btn button-cancle">Return to Shipping</a>
+            <a href="#" class="btn button-finish">Finish Order</a>
+          </div>
+        </form>
+      </div>
+
+  </div>
+</section>
+
+
+
+
+
+      <!-- <section style="padding-top: 15000px;"></section> -->
+
+     <!-- Footer -->
+     <footer class="text-center text-lg-start bg-body-tertiary footerContainer ">
+        
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+      
+        <!-- Right -->
+        <div>
+          <a href="#" class="me-3 text-reset"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="me-3 text-reset"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="me-3 text-reset"><i class="fab fa-google"></i></a>
+          <a href="#" class="me-3 text-reset"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="me-3 text-reset"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="me-3 text-reset"><i class="fab fa-github"></i></a>
+        </div>
+        <!-- Right -->
+      </section>
+      
+      <!-- Section: Links -->
+      <section>
+        <div class="container text-center text-md-start mt-2">
+          <div class="row mt-2">
+            
+            <!-- Company Info -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-2">
+              <h6 class="fw-bold navbar-logo">
+                <i class="fas fa-gem me-2"></i>Basma
+              </h6>
+              <p>Because handmade items are not just products, but pieces that cary the soul of their makers..</p>
+            </div>
+      
+            <!-- Products -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">
+              <h6 class="text-uppercase fw-bold">Useful Links</h6>
+              <p><a href="/HTML/home.html" class="text-reset">Home</a></p>
+              <p><a href="/HTML/services.html" class="text-reset">Services</a></p>
+              <p><a href="/HTML/aboutUs.html" class="text-reset">About Us</a></p>
+              <p><a href="/HTML/contact.html" class="text-reset">Contact Us</a></p>
+            </div>
+      
+            <!-- Useful Links -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
+              <h6 class="text-uppercase fw-bold">Useful Links</h6>
+              <p><a href="/HTML/products.html" class="text-reset">Products</a></p>
+              <p><a href="/HTML/profile.html" class="text-reset">Profile Settings</a></p>
+              <p><a href="/HTML/checkout.html" class="text-reset">Orders</a></p>
+              <p><a href="#!" class="text-reset">Help</a></p>
+            </div>
+      
+            <!-- Contact -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-2">
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <p><i class="fas fa-home me-2"></i> Irbid</p>
+              <p><i class="fas fa-envelope me-2"></i> info@example.com</p>
+              <p><i class="fas fa-phone me-2"></i> +962 798 902 468</p>
+              <p><i class="fas fa-phone me-2"></i> +962 790 000 000</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+      <!-- Copyright Section -->
+      <div class="text-center p-2" style="background-color: #3E4235; ">
+        © 2025 Basma. All Rights Reserved.
+      </div>
+      <!-- End Footer -->
+      
+      
+      </footer>
+    
+    
+      
+         <!-- Bootstrap 5 JS and jQuery  NAvbar -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+      <!-- NAvbar end -->
+       <!-- checkout -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="/JS/checkout.js"></script>
+    </body>
+    </html>
